@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+    --font-famyly: "Space Grotesk", sans-serif;
+
+    /* ### Primary */
+
+    --Linear-gradient-active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --Red-input-errors: hsl(0, 100%, 66%);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-image: url(interactive-card-details-form-main/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    font-family: var(--font-famyly);
+}
+
+.card-a{
+    background-image: url(interactive-card-details-form-main/images/bg-card-front.png);
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    justify-self: start;
+}
+
+.logo{
+    width: 80px;
+}
+
+.number-card, .name-card, .data-card{
+    color: var(--White);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.number-card{
+    margin-top: 50px;
+    font-size: 30px;
+    
+}
+
+.name-card, .data-card{
+    font-size: 18px;
+}
+
+.info-card{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container-General{
+    width: 1035px;
+    height: 530px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container-card{
+    width: 540px;
+    height: 525px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+}
+
+.card-b{
+    background-image: url(interactive-card-details-form-main/images/bg-card-back.png);
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+    align-self: flex-end;
+    justify-self: end;
+}
+
+.card-cvc{
+    color: var(--White);
+    letter-spacing: 3px;
+    position: absolute;
+    right: 60px;
+    top: 110px;
+}
+
+/* FORMULARIO */
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+}
+
+label{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    margin-bottom: 7px;
+}
+
+.input-expDate{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+input{
+    all: unset;
+    text-indent: 10px;
+    font-family: var(--font-famyly);
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--Light-grayish-violet);
+    margin-bottom: 5px;
+}
+
+.error{
+    color: var(--Red-input-errors);
+    font-size: 12px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.error-active{
+    height: 10px;
+    overflow: visible;
+}
+
+input:focus{
+    border-color: var(--Dark-grayish-violet);
+}
+
+.input-error{
+    border-color: var(--Red-input-errors);
+}
+
+
+.container-mmyy{
+    width: 100%;
+}
+
+.mmyy{
+    display: flex;
+    gap: 10px;
+}
+
+.mm, .yy{
+    width: 80px;
+    width: 100%;
+}
+
+.cvc{
+    width: 190px;
+}
+
+.button{
+    padding: 15px;
+    color: var(--White);
+    background: var(--Very-dark-violet);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* CONTAINER THANK YOU */
+
+.container-confirm{
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 350px;
+    background: var(--White);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.check{
+    width: 75px;
+    margin-bottom: 36px;
+}
+
+.thanks{
+    text-transform: uppercase;
+    font-weight: 700px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.message{
+    color: var(--Dark-grayish-violet);
+    margin-bottom: 45px;
+}
+
+.button-confirm{
+    width: 100%;
+    padding: 15px;
+    color: var(--White);
+    background: var(--Very-dark-violet);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    bottom: -100px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }

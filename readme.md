@@ -30,15 +30,6 @@ El formulario muestra mensajes de error en los campos inválidos y resalta el bo
 3. Si un campo es inválido, el borde se pondrá rojo y aparecerá un mensaje de error.
 4. Si todos los campos son válidos, se mostrará el contenedor de confirmación.
 
-## Estructura del Proyecto
-
-El proyecto se organiza de la siguiente manera:
-.
-├── index.html
-├── style.css
-├── code.ts
-└── Readme.md
-
 ## Detalles Técnicos
 
 ### Validación y Formateo

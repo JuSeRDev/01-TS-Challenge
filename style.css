@@ -51,6 +51,7 @@ body{
 }
 
 .number-card, .name-card, .data-card{
+    all: unset;
     color: var(--White);
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -143,17 +144,17 @@ input{
     margin-bottom: 5px;
 }
 
-.error{
+.error-number, .error-date, .error-cvc{
     color: var(--Red-input-errors);
     font-size: 12px;
     height: 0;
     overflow: hidden;
     margin-bottom: 25px;
+    transition: height 0.5s ease;
 }
 
 .error-active{
-    height: 10px;
-    overflow: visible;
+    height: 15px;
 }
 
 input:focus{
@@ -239,4 +240,78 @@ input:focus{
     position: relative;
     bottom: -100px;
 }
+
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (width <= 600px){
+    body{
+        width: 100%;
+        background-image: url(interactive-card-details-form-main/images/bg-main-mobile.png);
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .container-General{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        gap: 40px;
+    }
+
+    .container-card{
+        width: 90%;
+        display: flex;
+        height: 250px;
+        flex-direction: column;
+        justify-content: flex-start; 
+        position: relative;
+    }
+
+    .card-a, .card-b{
+        width: 285px;
+        height: 155px;
+        padding: 15px;
+        background-size: 100%;
+    }
+
+    .card-a{
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    .card-b{
+        z-index: 1;
+    }
+
+    .logo{
+        width: 50px;
+    }
+
+    .number-card{
+        margin: 0;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .name-card, .data-card{
+        font-size: 10px;
+    }
+
+    .card-cvc{
+        right: 40px;
+        top: 69px;
+        font-size: 12px;
+    }
+
+    .container-form{
+        width: 90%;
+    }
+
+    input{
+        text-indent: 5px;
+    }
+}

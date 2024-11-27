@@ -30,3 +30,29 @@ transform(numberInput, 16, numberCard, "0000 0000 0000 0000");
 transform(monthInput, 2, monthCard, "00");
 transform(yearInput, 2, yearCard, "00");
 transform(cvcInput, 3, cvcCard, "000");
+const errorNumber = document.querySelector(".error-number");
+const errorDate = document.querySelector(".error-date");
+const errorCVC = document.querySelector(".error-cvc");
+const errorActive = "error-active";
+const colorRed = "var(--Red-input-errors)";
+const containerConfirm = document.querySelector(".container-confirm");
+const validateInput = (input, error, count, e) => {
+    if (input.value.length < count) {
+        e.preventDefault();
+        error.classList.add(errorActive);
+        input.style.borderColor = colorRed;
+        return false;
+    }
+    else {
+        error.classList.remove(errorActive);
+        input.style.borderColor = "";
+        return true;
+    }
+};
+button.addEventListener("click", (e) => {
+    cardName.value.length < 8 ? e.preventDefault() : null;
+    validateInput(numberInput, errorNumber, 16, e);
+    validateInput(monthInput, errorDate, 1, e);
+    validateInput(yearInput, errorDate, 2, e);
+    validateInput(cvcInput, errorCVC, 3, e);
+});

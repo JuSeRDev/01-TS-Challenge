@@ -31,21 +31,21 @@
       <label for="cardholder-name" class="card-name">Cardholder Name</label>
       <input type="text" id="cardholder-name" placeholder="e.g. Jane Appleseed"></input>
       <label for="card-number" class="card-number">Card Number</label>
-      <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000"></input>
-      <p class="error">Wrong format, numbers only</p>
+      <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric"></input>
+      <p class="error-number">Wrong format, numbers only</p>
       <div class="input-expDate">
         <div class="container-mmyy">
           <label for="mmyy" class="mmyy">Exp. Date (MM/YY)</label>
           <div class="mmyy">
-            <input class="mm" type="text" id="mmyy" placeholder="MM"></input>
-            <input class="yy" type="text" id="mmyy" placeholder="YY"></input>
+            <input class="mm" type="text" id="mmyy" placeholder="MM" inputmode="numeric"></input>
+            <input class="yy" type="text" id="mmyy" placeholder="YY" inputmode="numeric"></input>
           </div>
-          <p class="error">Can't be blank</p>
+          <p class="error-date">Can't be blank</p>
         </div>
         <div class="container-cvc">
           <label for="cvc" class="cvc">CVC</label>
-          <input type="text" id="cvc" placeholder="e.g. 123"></input>
-          <p class="error">Can't be blank</p>
+          <input type="text" id="cvc" placeholder="e.g. 123" inputmode="numeric"></input>
+          <p class="error-cvc">Can't be blank</p>
         </div>
       </div>
       <button class="button">Confirm</button>

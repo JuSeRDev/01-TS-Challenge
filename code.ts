@@ -33,3 +33,32 @@ transform(monthInput, 2, monthCard, "00")
 transform(yearInput, 2, yearCard, "00")
 transform(cvcInput, 3, cvcCard, "000")
 
+const errorNumber = document.querySelector(".error-number") as HTMLParagraphElement
+const errorDate = document.querySelector(".error-date") as HTMLParagraphElement
+const errorCVC = document.querySelector(".error-cvc") as HTMLParagraphElement
+const errorActive: string = "error-active"
+const colorRed: string = "var(--Red-input-errors)"
+const containerConfirm = document.querySelector(".container-confirm") as HTMLDivElement
+
+const validateInput = (input: HTMLInputElement,error: HTMLParagraphElement, count: number, e:MouseEvent): boolean =>{
+    if (input.value.length < count) {
+        e.preventDefault()
+        error.classList.add(errorActive)
+        input.style.borderColor = colorRed
+        return false
+    } else {
+        error.classList.remove(errorActive)
+        input.style.borderColor = ""
+        return true
+    }
+}
+
+
+button.addEventListener("click", (e)=>{
+    cardName.value.length < 8 ? e.preventDefault() : null
+    validateInput(numberInput, errorNumber, 16, e)
+    validateInput(monthInput, errorDate, 1, e)
+    validateInput(yearInput, errorDate, 2, e)
+    validateInput(cvcInput, errorCVC, 3, e)
+})
+

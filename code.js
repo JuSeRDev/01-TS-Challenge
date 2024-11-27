@@ -55,4 +55,5 @@ button.addEventListener("click", (e) => {
     validateInput(monthInput, errorDate, 1, e);
     validateInput(yearInput, errorDate, 2, e);
     validateInput(cvcInput, errorCVC, 3, e);
+    !document.querySelector(`.${errorActive}`) ? containerConfirm.style.display = "flex" : null;
 });

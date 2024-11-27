@@ -314,4 +314,14 @@ input:focus{
     input{
         text-indent: 5px;
     }
+
+    .container-confirm{
+        bottom: -40px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .button-confirm{
+        padding: 20px;
+    }
 }
